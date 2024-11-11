@@ -30,7 +30,9 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::get('auth/google/redirect',[SocialLoginController::class,'redirect'])->name('auth.google.redirect');
-Route::get('auth/google/callback',[SocialLoginController::class,'callback'])->name('auth.google.callback');
+Route::get('auth/{provider}/redirect',[SocialLoginController::class,'redirect'])->name('auth.google.redirect');
+Route::get('auth/{provider}/callback',[SocialLoginController::class,'callback'])->name('auth.google.callback');
+
+
 
 require __DIR__.'/auth.php';

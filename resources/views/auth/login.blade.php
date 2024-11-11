@@ -44,7 +44,8 @@
             </x-primary-button>
         </div>
         <div>
-            <a href="{{route('auth.google.redirect')}}" class="btn btn-primary btn-sm text-gray-600"> Login With Google  </a>
+            <a href="{{route('auth.google.redirect','google')}}" class="btn btn-primary btn-sm text-gray-600"> Login With Google  </a>
+            <a href="{{route('auth.google.redirect','facebook')}}" class="btn btn-primary btn-sm text-gray-600"> Login With Facebook  </a>
         </div>
     </form>
 </x-guest-layout>
